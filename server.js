@@ -13,19 +13,24 @@ var PORT = 3000;
 var app = express();
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/nasaArticles", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost/techCrunchDB", {useNewUrlParser: true});
 
 // Routes -------
 
-// A GET route for scraping the nasa website
+// A GET route that redirects you to the articles route
+app.get('/', function(req, res) {
+    res.redirect('/articles');
+});
+
+// A GET route for scraping the Techcrunch website
 app.get("/scrape", function(req, res) {
     // First we grab the body of the html page with axios
-    axios.get("https://www.nasa.gov/news/releases/latest/index.html").then(function(response) {
+    axios.get("https://techcrunch.com/").then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(response.data);
 
     // Now, we grab the needed elements from the DOM
-    $("div.ember-view h3").each(function(i, element) {
+    $("h2.post-block__title").each(function(i, element) {
     // Save an empty result object
     var result = {};
 
