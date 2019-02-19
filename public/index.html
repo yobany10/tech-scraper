@@ -3,11 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Tech Scraper</title>
+        <link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Questrial" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <style>
-            body { background-color: gray }
+            body { background-color: whitesmoke }
+            .mainTitle {
+                color: rgb(81, 136, 153);
+                font-family: 'Kelly Slab', cursive;
+                margin-left: 10px;
+            }
             #wrapper {
-                width: 960px;
                 margin-left: auto;
                 margin-right: auto;
                 padding-top: 5%;
@@ -15,8 +20,8 @@
             #articles {
                 display: inline-block;
                 overflow: auto;
-                width: 60%;
-                height: 700px;
+                margin-left: 10px;
+                font-family: 'Questrial', sans-serif;
             }
             #notes {
                 float: right;
@@ -26,6 +31,7 @@
                 display: block;
                 width: 100%;
                 background-color: darkgray;
+                margin: auto;
             }
             input {
                 height: 36px;
@@ -39,7 +45,7 @@
     </head>
     <body>
         <div id="wrapper">
-            <h1>Tech Scraper</h1>
+            <h1 class="mainTitle">Tech Scraper</h1>
             <div id="articles"></div>
             <div id="notes"></div>
         </div>
