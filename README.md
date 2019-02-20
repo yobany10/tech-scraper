@@ -1,4 +1,4 @@
-# nasa_scraper
+# tech-scraper
 A web app that lets the user view the latest articles from TechCrunch. These news articles are scraped from the TechCrunch website using Cheerio and Mongoose.
 ## Screenshots of the app functions
 
