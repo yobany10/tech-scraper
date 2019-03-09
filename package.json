@@ -1,7 +1,7 @@
 {
-  "name": "nasa_scraper",
+  "name": "tech_scraper",
   "version": "1.0.0",
-  "description": "A web app that lets user view and comment on the latest news from Nasa. These news articles are scraped from Nasa's site using Cheerio and Mongoose.",
+  "description": "A web app that lets the user view the latest articles from TechCrunch. These news articles are scraped from the TechCrunch website using Cheerio and Mongoose.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

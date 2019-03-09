@@ -6,7 +6,7 @@ var logger = require("morgan");
 var cheerio = require("cheerio");
 var axios = require("axios");
 
-var db = require("./models");
+var db = require("./models/index");
 
 var PORT = process.env.PORT || 3000;
 
